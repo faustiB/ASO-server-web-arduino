@@ -34,14 +34,13 @@ echo -e "El valor es: $v4"
 
 
 echo "<h3>MENU</h3>"
-
-
-echo -e '<button type="submit" action="shutdown.sh">Shutdown</button><br>'
-echo -e '<button type="submit" action="reboot.sh">Reboot</button><br>'
-
-
-
-echo -e "
-         </body>
+echo '
+	<form action="reboot.sh" method="post" ENCTYPE="text/plain">
+        <input type="submit" value="Reboot" name="parametrePOST">
+	</form>
+	<form action="shutdown.sh" method="post" ENCTYPE="text/plain">
+        <input type="submit" value="Shutdown" name="parametrePOST">
+	</form>
+        </body>
 </html>
-"
+'
