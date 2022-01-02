@@ -11,7 +11,7 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 	<body>
 	"
 echo -e '
-	<form action="receiveLogin.sh" method="get" ENCTYPE="text/plain"> 
+	<form action="receiveLogin.sh" method="post" ENCTYPE="text/plain"> 
 	<br/>
 	User: <input type="text" name="user" size="20">
 	<br/>
