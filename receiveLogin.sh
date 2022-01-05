@@ -37,10 +37,24 @@ echo -e "El valor de password  es: $passwordOk"
 echo "<h3>MENU</h3>"
 echo '
 	<form action="reboot.sh" method="get" ENCTYPE="text/plain">
-        <input type="submit" value="Reboot" name="parametrePOST">
+        	<input type="submit" value="Reboot" name="parametrePOST">
 	</form>
 	<form action="shutdown.sh" method="get" ENCTYPE="text/plain">
-        <input type="submit" value="Shutdown" name="parametrePOST">
+        	<input type="submit" value="Shutdown" name="parametrePOST">
+	</form>
+	<form action="gestion.sh" method="get" ENCTYPE="text/plain">
+        	<input type="submit" value="Gestion de procesos" name="parametrePOST">
+	</form>
+	<form action="monitor.sh" method="get" ENCTYPE="text/plain">
+        	<input type="submit" value="Monitorizar" name="parametrePOST">
+	</form>
+	<form action="log.sh" method="get" ENCTYPE="text/plain">
+        	<input type="submit"Logs" value="See logs" name="parametrePOST">
+	</form>
+	<form action="user.sh" method="post" ENCTYPE="text/plain">
+        	<h5>Introduce new user name</h5>
+		Name: <input type="text" name="user" size="20"> 
+		<input type="submit" value="Crear usuario" name="user">
 	</form>
         </body>
 </html>

@@ -13,13 +13,13 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 	</p>
 	<h3>Search by PID</h3>
 		<form action='pid.sh' method='post' ENCTYPE='text/plain'>
-			PID: <input type='text' name='PID' size='5'>
-			<input type='submit' value='Submit' name='parametrePOST'>
+			PID: <input type='number' name='pid' size='5'>
+			<input type='submit' value='Submit' name='pid'>
 		</form>
 	<h3>Kill Process</h3>
 		<form action='killprocess.sh' method='post' ENCTYPE='text/plain'>
-			PID: <input type='text' name='PID' size='5'>
-			<input type='submit' value='Submit' name='parametrePOST'>
+			PID: <input type='number' name='matar' size='5'>
+			<input type='submit' value='Submit' name='matar'>
 		</form>
 	</body>
 </html>
