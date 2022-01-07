@@ -1,7 +1,7 @@
 #!/bin/bash
-read user
+read delete
 
-username=${user::-1}
+username=${delete::-1}
 usernameok=$(echo "$username" | awk -F= '{print $2}')
 
 echo Content-Type: text/html
@@ -12,7 +12,8 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 <head>
 </head>
 <body>
-	<h3>New user created</h3>
+
+	<h3>User deleted</h3>
 	
 	<form action='receiveLogin.sh'>
 		<input type='submit' value='Main menu'>
@@ -20,4 +21,4 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 </body>
 </html>
 "
-$(sudo useradd $usernameok)
+$(sudo userdel $usernameok)

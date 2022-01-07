@@ -56,6 +56,11 @@ echo '
 		Name: <input type="text" name="user" size="20"> 
 		<input type="submit" value="Crear usuario" name="user">
 	</form>
+	<form action="deleteUser.sh" method="post" ENCTYPE="text/plain">
+        	<h5>Introduce user name to delete</h5>
+		Name: <input type="text" name="delete" size="20"> 
+		<input type="submit" value="Borrar usuario" name="delete">
+	</form>
         </body>
 </html>
 '
