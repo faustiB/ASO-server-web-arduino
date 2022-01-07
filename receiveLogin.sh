@@ -51,6 +51,9 @@ echo '
 	<form action="log.sh" method="get" ENCTYPE="text/plain">
         	<input type="submit"Logs" value="See logs" name="parametrePOST">
 	</form>
+	<form action="cron.sh" method="get" ENCTYPE="text/plain">
+        	<input type="submit"Logs" value="crontab" name="parametrePOST">
+	</form>
 	<form action="user.sh" method="post" ENCTYPE="text/plain">
         	<h5>Introduce new user name</h5>
 		Name: <input type="text" name="user" size="20"> 
