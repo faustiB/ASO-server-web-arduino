@@ -12,7 +12,7 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 	<head>
 	</head>
 	<body>
-	<h3>Process Killed!</h3>
+	<h3>Scheduling new task</h3>
 	<p>
 	The command is: $cronok
         </p>
@@ -22,3 +22,4 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 	</body>
 </html>
 "
+$(sudo crontab -e 0 6 * * * /bin/$cronok )

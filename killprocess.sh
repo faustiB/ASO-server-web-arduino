@@ -17,6 +17,7 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 	The PID is: $matarok
         </p>
 	$(sudo kill -9 $matarok)
+	$(sudo logger -i $matarok has been killed)
         <form action='receiveLogin.sh'>
         	<input type='submit' value='Main menu'>
         </form>

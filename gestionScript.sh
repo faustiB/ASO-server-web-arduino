@@ -9,6 +9,7 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 	<body>
 	<h3> System process</h3>
 	$(ps aux | sudo awk 'BEGIN{ print"<table>" }{ print"<tr><td>"$0"</td></tr>" } END { print"</table>"}')	
+	$(sudo logger -i Enteret monitorization on processes)
 	<h3>Search by PID</h3>
 		<form action='pid.sh' method='post' ENCTYPE='text/plain'>
 			PID: <input type='number' name='pid' size='5'>

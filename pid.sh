@@ -17,7 +17,8 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 echo -e "PID is: $pidok <br>"
 "
 	"
-	result=$(echo $(sudo ps aux | grep $pidok))
+	result=$(echo $(sudo ps aux | grep $pidok)
+	$(sudo logger -i $pidok is being shown))
 
 echo -e "The result is:<br> $result
 	

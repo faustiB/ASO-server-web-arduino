@@ -16,6 +16,7 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 	$(sudo cat /var/log/messages | tail -n 30 | sudo awk 'BEGIN{ print"<table>" }{ print"<tr><td>"$0"</td></tr>" } END { print"</table>"}' )
 	<br>
 	<br>
+	$(sudo logger -i Entered in log.sh)
 
 	<form action='receiveLogin.sh'>	
 		<input type='submit' value='Main menu'>

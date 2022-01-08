@@ -27,12 +27,10 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
   
 
 
-echo -e "les dades enviades <br/>"
-
-
 echo -e "El valor de user es : $usernameOk"
 echo -e "El valor de password  es: $passwordOk"
 
+$(sudo logger -i $usernameOk has entered the menu)
 
 echo "<h3>MENU</h3>"
 echo '
