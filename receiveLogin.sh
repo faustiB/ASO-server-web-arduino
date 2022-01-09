@@ -24,46 +24,54 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 "
   
 
-
-echo -e "El valor de user es : $usernameOk"
-echo -e "El valor de password  es: $passwordOk"
-
 $(sudo logger -i $usernameOk has entered the menu)
 
 echo "<h3>MENU</h3>"
 echo '
 	<form action="reboot.sh" method="get" ENCTYPE="text/plain">
-        	<input type="submit" value="Reboot" name="parametrePOST">
+        	<input type="submit" value="Reboot" name="parametreGET">
 	</form>
+
 	<form action="shutdown.sh" method="get" ENCTYPE="text/plain">
-        	<input type="submit" value="Shutdown" name="parametrePOST">
+        	<input type="submit" value="Shutdown" name="parametreGET">
 	</form>
-	<form action="gestion.sh" method="get" ENCTYPE="text/plain">
-        	<input type="submit" value="Gestion de procesos" name="parametrePOST">
+
+	<form action="gestionScript.sh" method="get" ENCTYPE="text/plain">
+        	<input type="submit" value="Gestion de procesos" name="parametreGET">
 	</form>
-	<form action="monitor.sh" method="get" ENCTYPE="text/plain">
-        	<input type="submit" value="Monitorizar" name="parametrePOST">
+
+	<form action="monitorScript.sh" method="get" ENCTYPE="text/plain">
+        	<input type="submit" value="Monitorizar" name="parametreGET">
 	</form>
+
 	<form action="log.sh" method="get" ENCTYPE="text/plain">
-        	<input type="submit"Logs" value="See logs" name="parametrePOST">
+        	<input type="submit"Logs" value="See logs" name="parametreGET">
 	</form>
-	<form action="cron.sh" method="get" ENCTYPE="text/plain">
-        	<input type="submit"Logs" value="Crontab" name="parametrePOST">
+
+	<form action="cronScript.sh" method="get" ENCTYPE="text/plain">
+        	<input type="submit"Logs" value="Crontab" name="parametreGET">
 	</form>
+
 	<form action="music.sh" method="get" ENCTYPE="text/plain">
-        	<input type="submit"Logs" value="Music" name="parametrePOST">
+        	<input type="submit"Logs" value="Music" name="parametreGET">
 	</form>
+	
+	<form action="iptables.sh" method="get" ENCTYPE="text/plain">
+        	<input type="submit"Logs" value="Packet filtering" name="parametreGET">
+	</form>
+
 	<form action="user.sh" method="post" ENCTYPE="text/plain">
         	<h5>Introduce new user name</h5>
 		Name: <input type="text" name="user" size="20"> 
 		<input type="submit" value="Crear usuario" name="user">
 	</form>
+
 	<form action="deleteUser.sh" method="post" ENCTYPE="text/plain">
         	<h5>Introduce user name to delete</h5>
 		Name: <input type="text" name="delete" size="20"> 
 		<input type="submit" value="Borrar usuario" name="delete">
 	</form>
+
         </body>
 </html>
 '
-#if [ "$username" == "pi" ]; then

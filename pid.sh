@@ -18,7 +18,7 @@ echo -e "PID is: $pidok <br>"
 "
 	"
 	result=$(echo $(sudo ps aux | grep $pidok)
-	$(sudo logger -i $pidok is being shown))
+	$(sudo logger -i process $pidok is being shown))
 
 echo -e "The result is:<br> $result
 	
