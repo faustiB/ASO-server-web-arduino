@@ -20,7 +20,8 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 	<form action='playlist.sh'>
 		Press to see playlist: <input type='submit' value='Playlist'>
 	</form>
-	<form action='loop.sh'>
+	<form action='loop.sh' method='post' ENCTYPE='text/plain'>
+		<input type='text' name='song' size='20'>
 		Press to loop: <input type='submit' value='Loop'>
 	</form>
 	<form action='receiveLogin.sh'>

@@ -6,7 +6,7 @@ read password
 username=${username::-1}
 usernameOk=$(echo "$username" | awk -F= '{print $2}')
 
-password=${password::-1}
+password=$(echo "$password")
 passwordOk=$(echo "$password" | awk -F= '{print $2}')
 
 echo Content-Type: text/html

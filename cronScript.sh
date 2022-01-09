@@ -12,8 +12,8 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 	$(sudo logger -i Entered to the cron show)
 	<h3>Add new daily task</h3>
 	<form action='newCron.sh' method='post'>
-	Input command: <input type='text' name='cron' size='20'>
-	<input type='submit' value='Submit' name='cron'
+		Input command: <input type='text' name='cron' size='40'>
+		<input type='submit' value='Submit' name='cron'>
 	</form>
 		
 	</body>

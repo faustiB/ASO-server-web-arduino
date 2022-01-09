@@ -1,8 +1,7 @@
 #!/bin/bash
 
 read cron 
-cron=${cron::-1}
-cronok=$(echo "$cron" | awk -F= '{print $2}')
+cronOk=$(echo "$cron" | awk -F= '{print $2}')
 
 echo Content-Type: text/html
 echo
@@ -14,7 +13,7 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 	<body>
 	<h3>Scheduling new task</h3>
 	<p>
-	The command is: $cronok
+	The command is: $cronOk
         </p>
         <form action='receiveLogin.sh'>
         	<input type='submit' value='Main menu'>
@@ -22,4 +21,8 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 	</body>
 </html>
 "
-$(sudo crontab -e 0 6 * * * /bin/$cronok )
+$(sudo crontab -l > mycron)
+$(sudo echo $cronOk >> mycron)
+$(sudo crontab mycron)
+$(sudo rm mycron)
+
