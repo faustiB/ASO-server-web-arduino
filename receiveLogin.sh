@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 read username
 read password
 
@@ -50,7 +48,10 @@ echo '
         	<input type="submit"Logs" value="See logs" name="parametrePOST">
 	</form>
 	<form action="cron.sh" method="get" ENCTYPE="text/plain">
-        	<input type="submit"Logs" value="crontab" name="parametrePOST">
+        	<input type="submit"Logs" value="Crontab" name="parametrePOST">
+	</form>
+	<form action="music.sh" method="get" ENCTYPE="text/plain">
+        	<input type="submit"Logs" value="Music" name="parametrePOST">
 	</form>
 	<form action="user.sh" method="post" ENCTYPE="text/plain">
         	<h5>Introduce new user name</h5>
@@ -65,3 +66,4 @@ echo '
         </body>
 </html>
 '
+#if [ "$username" == "pi" ]; then
